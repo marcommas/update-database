@@ -1,0 +1,11 @@
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Release\AtualizacaoBaseDeDados.exe.config
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.frConfigBase.resources
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.frPrincipal.resources
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.Properties.Resources.resources
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.csproj.GenerateResource.Cache
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Release\AtualizacaoBaseDeDados.exe
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Release\AtualizacaoBaseDeDados.pdb
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Release\FirebirdSql.Data.FirebirdClient.dll
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.csprojResolveAssemblyReference.cache
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.exe
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.pdb

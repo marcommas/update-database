@@ -1,0 +1,14 @@
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Debug\AtualizacaoBaseDeDados.exe.config
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.csprojResolveAssemblyReference.cache
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.frConfigBase.resources
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.frPrincipal.resources
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.Properties.Resources.resources
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.csproj.GenerateResource.Cache
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Debug\AtualizacaoBaseDeDados.exe
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Debug\AtualizacaoBaseDeDados.pdb
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.exe
+E:\DADOS\Genialtec\OpenSource\GT Browser\GT Browser 3.0\GT Browser 3.0\BrowserTerminal\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.pdb
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Debug\AtualizacaoBaseDeDados.exe.config
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.exe
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.pdb
