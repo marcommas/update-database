@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frConfigBase));
             this.btProcurar = new System.Windows.Forms.Button();
             this.bSalvar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,12 +57,14 @@
             this.bSalvar.BackColor = System.Drawing.Color.White;
             this.bSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSalvar.Image = ((System.Drawing.Image)(resources.GetObject("bSalvar.Image")));
             this.bSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bSalvar.Location = new System.Drawing.Point(27, 179);
+            this.bSalvar.Location = new System.Drawing.Point(16, 161);
             this.bSalvar.Name = "bSalvar";
-            this.bSalvar.Size = new System.Drawing.Size(170, 70);
+            this.bSalvar.Size = new System.Drawing.Size(189, 57);
             this.bSalvar.TabIndex = 98;
             this.bSalvar.Text = "Conectar Banco ";
+            this.bSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bSalvar.UseVisualStyleBackColor = false;
             this.bSalvar.Click += new System.EventHandler(this.bSalvar_Click);
             // 
@@ -118,11 +121,15 @@
             // 
             // btSincronizacao
             // 
-            this.btSincronizacao.Location = new System.Drawing.Point(332, 179);
+            this.btSincronizacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSincronizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSincronizacao.Image = ((System.Drawing.Image)(resources.GetObject("btSincronizacao.Image")));
+            this.btSincronizacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSincronizacao.Location = new System.Drawing.Point(285, 162);
             this.btSincronizacao.Name = "btSincronizacao";
-            this.btSincronizacao.Size = new System.Drawing.Size(129, 56);
+            this.btSincronizacao.Size = new System.Drawing.Size(189, 56);
             this.btSincronizacao.TabIndex = 100;
-            this.btSincronizacao.Text = "realizar sincronização";
+            this.btSincronizacao.Text = "Sincronizar";
             this.btSincronizacao.UseVisualStyleBackColor = true;
             this.btSincronizacao.Visible = false;
             this.btSincronizacao.Click += new System.EventHandler(this.btSincronizacao_Click);
@@ -132,7 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(507, 330);
+            this.ClientSize = new System.Drawing.Size(498, 254);
             this.Controls.Add(this.btSincronizacao);
             this.Controls.Add(this.btProcurar);
             this.Controls.Add(this.bSalvar);
@@ -141,9 +148,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbLocalhost);
             this.Controls.Add(this.tbIp);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frConfigBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frConfigBase";
+            this.Text = "Atualizar Base de Dados";
             this.ResumeLayout(false);
             this.PerformLayout();
 

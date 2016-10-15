@@ -27,13 +27,13 @@ namespace AtualizacaoBaseDeDados
         {
             if (tbIp.Text == "")
             {
-                MessageBox.Show("É preciso definir o IP");
+                MessageBox.Show("É preciso definir o IP.");
                 return false;
             }
 
             if (tbCaminho.Text == "")
             {
-                MessageBox.Show("É preciso selecionar uma base de dados");
+                MessageBox.Show("É preciso selecionar uma base de dados.");
                 return false;
             }
 

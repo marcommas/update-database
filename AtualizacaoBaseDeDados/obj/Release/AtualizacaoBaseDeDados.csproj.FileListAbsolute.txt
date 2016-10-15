@@ -1,6 +1,5 @@
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Release\AtualizacaoBaseDeDados.exe.config
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.frConfigBase.resources
-E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.frPrincipal.resources
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.Properties.Resources.resources
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\obj\Release\AtualizacaoBaseDeDados.csproj.GenerateResource.Cache
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados\bin\Release\AtualizacaoBaseDeDados.exe
