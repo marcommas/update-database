@@ -83,7 +83,7 @@ namespace AtualizacaoBaseDeDados
             catch (Exception)
             {
 
-                MessageBox.Show("ERRO AO CONECTAR COM BANCO DE DADOS!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao executar script!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
