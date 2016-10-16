@@ -16,7 +16,7 @@ namespace AtualizacaoBaseDeDados
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frConfigBase());
+            Application.Run(new frPrincipal());
         }
     }
 }

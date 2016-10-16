@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace AtualizacaoBaseDeDados
 {
-    public partial class frConfigBase : Form
+    public partial class frPrincipal : Form
     {
         ConFirebird conFb;
 
-        public frConfigBase()
+        public frPrincipal()
         {
             InitializeComponent();
             mostraEscondePassos(1);
@@ -61,18 +61,18 @@ namespace AtualizacaoBaseDeDados
 
                 if (tbCaminhoArquivo.Text == "")
                 {
-                    MessageBox.Show("É preciso selecionar um arquivo.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("É preciso selecionar um script.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
 
                 if (tbCaminhoArquivo.TextLength > 4)
                 {
-                    txt = ".TXT";
+                    txt = ".SQL";
                     caminhoTxt = tbCaminhoArquivo.Text.Substring(tbCaminhoArquivo.TextLength - 4);
 
                     if (!txt.Equals(caminhoTxt, StringComparison.OrdinalIgnoreCase))
                     {
-                        MessageBox.Show("É preciso selecionar um arquivo válido.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("É preciso selecionar um script válido.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -82,17 +82,8 @@ namespace AtualizacaoBaseDeDados
             return true;
         }
 
-        /*
+         /*
          * PASSO 1
-         */ 
-        private void btBackup_Click(object sender, EventArgs e)
-        {
-            backup();
-            mostraEscondePassos(2);
-        }
-
-        /*
-         * PASSO 2
          */ 
         private void btConectarBanco_Click(object sender, EventArgs e)
         {
@@ -109,7 +100,7 @@ namespace AtualizacaoBaseDeDados
                         conAux.Close();
 
                         MessageBox.Show("Base de dados conectada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        mostraEscondePassos(3);
+                        mostraEscondePassos(2);
 
                     }
                 }
@@ -159,19 +150,32 @@ namespace AtualizacaoBaseDeDados
         }
 
         /*
+         * PASSO 2
+         */
+        private void btBackup_Click(object sender, EventArgs e)
+        {
+            bool realizouBackup = false;
+            Backup back = new Backup();
+            realizouBackup = back.backup(tbCaminhoBanco.Text);
+
+            if (realizouBackup)
+            {
+                mostraEscondePassos(3);
+            }
+
+        }
+
+        /*
          * PASSO 3
          */ 
         private void btProcurarArquivo_Click(object sender, EventArgs e)
         {
-            if (ofdArquivo.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (ofdScript.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                tbCaminhoArquivo.Text = ofdArquivo.FileName;
+                tbCaminhoArquivo.Text = ofdScript.FileName;
             }
         }
 
-        /*
-         * PASSO 4
-         */ 
         private void btCarregarArquivo_Click(object sender, EventArgs e)
         {
             if (camposObrigatorios(2))
@@ -183,18 +187,15 @@ namespace AtualizacaoBaseDeDados
         }
 
         /*
-         * PASSO 3
+         * PASSO 4
          */ 
         private void btSincronizacao_Click(object sender, EventArgs e)
         {
-            string sql = leArquivo(tbCaminhoArquivo.Text);
-
-            ComandoSql.ComandoFb(sql);
+            leImportaArquivo(tbCaminhoArquivo.Text);
 
             MessageBox.Show("Base de dados Atualizada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            mostraEscondePassos(1);
-            limpaCampos();
+            this.Close();
         }
 
         private void mostraEscondePassos(int passo)
@@ -202,14 +203,19 @@ namespace AtualizacaoBaseDeDados
             switch (passo)
             {
                 case 1:
-                    btBackup.Visible = true;
+                    gb.Visible = true;
                     lPasso1.Visible = true;
+                    btConectarBanco.Visible = true;
+                    lIp.Visible = true;
+                    tbIp.Visible = true;
+                    cbLocalhost.Visible = true;
+                    lLocal.Visible = true;
+                    tbCaminhoBanco.Visible = true;
+                    btProcurarBase.Visible = true;
 
-                    gbConectarBanco.Visible = false;
+                    btBackup.Visible = false;
                     lPasso2.Visible = false;
-                    btConectarBanco.Visible = false;
 
-                    gbCarregarArquivo.Visible = false;
                     lPasso3.Visible = false;
                     btCarregarArquivo.Visible = false;
 
@@ -218,14 +224,15 @@ namespace AtualizacaoBaseDeDados
 
                     break;
                 case 2 :
-                    btBackup.Visible = false;
+                    gb.Visible = false;
                     lPasso1.Visible = false;
+                    btConectarBanco.Visible = false;
 
-                    gbConectarBanco.Visible = true;
+                    btBackup.Visible = true;
                     lPasso2.Visible = true;
-                    btConectarBanco.Visible = true;
 
-                    gbCarregarArquivo.Visible = false;
+                    tbCaminhoArquivo.Visible = false;
+                    btProcurarArquivo.Visible = false;
                     lPasso3.Visible = false;
                     btCarregarArquivo.Visible = false;
 
@@ -234,13 +241,22 @@ namespace AtualizacaoBaseDeDados
                     
                     break;
                 case 3 :
-                    btBackup.Visible = false;
                     lPasso1.Visible = false;
-                    gbConectarBanco.Visible = false;
-                    lPasso2.Visible = false;
+                    lIp.Visible = false;
+                    tbIp.Visible = false;
+                    cbLocalhost.Visible = false;
+                    lLocal.Visible = false;
+                    tbCaminhoBanco.Visible = false;
+                    btProcurarBase.Visible = false;
                     btConectarBanco.Visible = false;
 
-                    gbCarregarArquivo.Visible = true;
+                    lPasso2.Visible = false;
+                    btBackup.Visible = false;
+
+                    gb.Visible = true;
+                    gb.Text = "Carregar Arquivo";
+                    tbCaminhoArquivo.Visible = true;
+                    btProcurarArquivo.Visible = true;
                     lPasso3.Visible = true;
                     btCarregarArquivo.Visible = true;
 
@@ -251,11 +267,12 @@ namespace AtualizacaoBaseDeDados
                 case 4 :
                     btBackup.Visible = false;
                     lPasso1.Visible = false;
-                    gbConectarBanco.Visible = false;
+                    gb.Visible = false;
                     lPasso2.Visible = false;
                     btConectarBanco.Visible = false;
 
-                    gbCarregarArquivo.Visible = false;
+                    tbCaminhoArquivo.Visible = false;
+                    btProcurarArquivo.Visible = false;
                     lPasso3.Visible = false;
                     btCarregarArquivo.Visible = false;
 
@@ -268,52 +285,30 @@ namespace AtualizacaoBaseDeDados
 
         private void limpaCampos()
         {
-            tbIp.Clear();
+            //tbIp.Clear();
             tbCaminhoBanco.Clear();
 
             tbCaminhoArquivo.Clear();
 
         }
 
-        private void backup()
+        private void leImportaArquivo(string arquivo)
         {
+            string sql;
 
-            MessageBox.Show("Para efetuar o backup é necessário estar no mesmo computador aonde se encontra a base de dados.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Software GT Manager Base|*.GDB";
-            saveFileDialog1.Title = "Save Backup Database";
-            saveFileDialog1.FileName = "Backup " + DateTime.Today.ToString().Replace('/', '-').Substring(0, 10);
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            using (StreamReader texto = new StreamReader(arquivo))
             {
-                if (saveFileDialog1.FileName != "")
+                while ((sql = texto.ReadLine()) != null)
                 {
-                    // Saves the Image via a FileStream created by the OpenFile method.
-                    string conexao = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ToString();
-                    string[] file_backup_local = conexao.Split('=');
-                    string[] file_backup_local_aux = file_backup_local[2].Split(';');
-                    File.Copy(file_backup_local_aux[0].ToString(), saveFileDialog1.FileName.ToString());
-
-                    MessageBox.Show("Backup salvo com sucesso!", "Concluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ComandoSql.ExecImpSQL(sql);
                 }
             }
         }
 
-        private string leArquivo(string arquivo)
+        private void btSobre_Click(object sender, EventArgs e)
         {
-            string mensagem;
-            string mensagemTexto = "";
-
-            using (StreamReader texto = new StreamReader(arquivo))
-            {
-                while ((mensagem = texto.ReadLine()) != null)
-                {
-                    mensagemTexto += mensagem + " ";
-                }
-            }
-
-            return mensagemTexto;
+            frSobre sobre = new frSobre();
+            sobre.Show();
         }
 
         

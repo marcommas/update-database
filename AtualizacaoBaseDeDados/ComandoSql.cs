@@ -15,7 +15,7 @@ namespace AtualizacaoBaseDeDados
         public static DataTable ComandoDT(string sql)
         {
 
-            frConfigBase configBase = new frConfigBase();
+            frPrincipal configBase = new frPrincipal();
             string conexao = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ToString();
             FbConnection dbcon = new FbConnection(conexao);
             FbCommand cmdCad = new FbCommand(sql, dbcon);
@@ -86,6 +86,28 @@ namespace AtualizacaoBaseDeDados
                 MessageBox.Show("Erro ao executar script!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+
+        public static void ExecImpSQL(string SQL)
+        {
+            try
+            {
+                string conexao = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ToString();
+                FbConnection dbcon = new FbConnection(conexao);
+                FbCommand cmdCad = new FbCommand(SQL, dbcon);
+                FbDataAdapter DA = new FbDataAdapter(cmdCad);
+
+                dbcon.Open();
+                cmdCad.ExecuteNonQuery();
+
+                dbcon.Close();
+
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Erro ao executar script!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }
