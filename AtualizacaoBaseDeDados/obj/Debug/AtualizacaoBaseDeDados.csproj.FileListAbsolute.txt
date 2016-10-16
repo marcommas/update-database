@@ -21,3 +21,4 @@ E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados_1.1\
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados_1.1\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.Properties.Resources.resources
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados_1.1\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.csproj.GenerateResource.Cache
 E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados_1.1\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.frPrincipal.resources
+E:\DADOS\Genialtec\OpenSource\AtualizacaoBaseDeDados\AtualizacaoBaseDeDados_1.1\AtualizacaoBaseDeDados\obj\Debug\AtualizacaoBaseDeDados.frSobre.resources
